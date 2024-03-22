@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "ws/frontend"
+		},
+		{
+			"path": "ws/backend"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"_bashrc": "shellscript",
+			"*.css": "tailwindcss",
+		},
+	}
+}
