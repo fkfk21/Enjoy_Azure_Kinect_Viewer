@@ -3,6 +3,8 @@ import HomePage from '@/app/page';
 import Test from '@/app/test/page';
 import NotFoundPage from '@/component/not_found';
 
+import './styles.css';
+
 function App() {
   return (
     <Router>
