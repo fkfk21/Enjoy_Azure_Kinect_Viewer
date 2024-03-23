@@ -9,7 +9,7 @@ services:
         source: ./ws/frontend
         target: /home/node/ws
     ports:
-      - 4000:3000
+      - 2525:3000
     environment:
       - SERVICE_NAME=frontend
   
@@ -20,6 +20,6 @@ services:
         source: ./ws/backend
         target: /home/node/ws
     ports:
-      - 5000:3000
+      - 2828:3000
     environment:
       - SERVICE_NAME=backend

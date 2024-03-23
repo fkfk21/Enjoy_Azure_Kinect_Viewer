@@ -1,5 +1,3 @@
-import './styles.css';
-
 const Page = () => {
   return (
     <div>

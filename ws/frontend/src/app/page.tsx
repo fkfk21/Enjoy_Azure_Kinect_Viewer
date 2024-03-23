@@ -1,8 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import reactLogo from '@/assets/react.svg';
 import viteLogo from '/vite.svg';
-
-import './styles.css';
 import { Button } from 'flowbite-react';
 
 export function Page() {
@@ -12,7 +10,7 @@ export function Page() {
 
   useEffect(() => {
     if (!ws.current) {
-      ws.current = new WebSocket('ws://localhost:5000');
+      ws.current = new WebSocket('ws://localhost:2828');
       ws.current.onopen = () => {
         console.log('connected');
       };
@@ -62,9 +60,7 @@ export function Page() {
         </p>
         <Button>Click me</Button>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
     </>
   );
 }
