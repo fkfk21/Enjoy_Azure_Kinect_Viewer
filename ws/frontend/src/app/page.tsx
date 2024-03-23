@@ -4,6 +4,9 @@ import { ImageSubscriber } from '@/component/ros/subscriber';
 import { RosConnection, RosConnectionStatus } from '@/component/ros/ros';
 import ROSLIB from 'roslib';
 import { Button, Label } from 'flowbite-react';
+import { FaSquareTwitter } from 'react-icons/fa6';
+import { FaGithubSquare } from 'react-icons/fa';
+import { QRCodeSVG } from 'qrcode.react';
 
 enum ImageTopic {
   DEPTH = '/depth/image_raw/compressed',
@@ -73,6 +76,18 @@ export function Page() {
   return (
     <>
       <RosConnection reconnection_flag={reconnection_flag} setRos={setRos} setStatus={setStatus} />
+      <div className="absolute right-6 flex m-3 gap-5">
+        <div className="flex p-2 border-2 gap-3 border-blue-300 rounded-lg">
+          <FaSquareTwitter size={50} color="#1DA1F2" />
+          <QRCodeSVG value="https://twitter.com/fkfk21_18" size={50} />
+        </div>
+        <div className="flex p-2 border-2 border-gray-300 rounded-lg gap-3">
+          <QRCodeSVG value="https://github.com/fkfk21/Enjoy_Azure_Kinect" size={50} />
+          <FaGithubSquare size={50} color="#030303" />
+          <QRCodeSVG value="https://github.com/fkfk21/Enjoy_Azure_Kinect_Viewer" size={50} />
+        </div>
+      </div>
+
       <h1 className="text-5xl font-serif">Enjoy Azure Kinect</h1>
       <p className="m-2 text-lg font-sans">2023年工大祭で展示したものの再展示です</p>
       <hr className="m-3" />
