@@ -9,15 +9,14 @@ import { FaGithubSquare } from 'react-icons/fa';
 import { QRCodeSVG } from 'qrcode.react';
 
 enum ImageTopic {
+  NONE = 'None',
   DEPTH = '/depth/image_raw/compressed',
   DEPTH_TO_RGB = '/depth_to_rgb/image_raw/compressed',
-  IR = '/ir/image_raw/compressed',
   RGB = '/rgb/image_raw/compressed',
-  RGB_TO_DEPTH = '/rgb_to_depth/image_raw/compressed',
 }
 
 const TopicPickAndDisplay = ({ ros }: { ros: ROSLIB.Ros | null }) => {
-  const [topic, setTopic] = useState<string>(ImageTopic.RGB);
+  const [topic, setTopic] = useState<string>(ImageTopic.NONE);
 
   /* 
     /depth/image_raw [sensor_msgs/msg/Image]
@@ -89,7 +88,7 @@ export function Page() {
       </div>
 
       <h1 className="text-5xl font-serif">Enjoy Azure Kinect</h1>
-      <p className="m-2 text-lg font-sans">2023年工大祭で展示したものの再展示です</p>
+      <p className="m-2 text-lg font-sans whitespace-pre"> </p>
       <hr className="m-3" />
       <p className="text-center text-7xl font-sans">手を叩いて！！！</p>
 

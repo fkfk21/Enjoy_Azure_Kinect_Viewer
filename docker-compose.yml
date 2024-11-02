@@ -13,13 +13,13 @@ services:
     environment:
       - SERVICE_NAME=frontend
   
-  backend:
-    build: *node_image
-    volumes:
-      - type: bind 
-        source: ./ws/backend
-        target: /home/node/ws
-    ports:
-      - 2828:3000
-    environment:
-      - SERVICE_NAME=backend
+  # backend:
+  #   build: *node_image
+  #   volumes:
+  #     - type: bind 
+  #       source: ./ws/backend
+  #       target: /home/node/ws
+  #   ports:
+  #     - 2828:3000
+  #   environment:
+  #     - SERVICE_NAME=backend
